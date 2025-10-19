@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background: #f8f6f1;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#hedlinecontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease forwards;
+  animation-delay: 0.7s;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#shine {
+  font-size: 60px;
+  font-weight: bold;
+  color: rgba(255, 0, 102, 0.3);
+  z-index: 10;
+  background: -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
+  -webkit-background-size: 150px;
+  background-size: 150px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-animation-name: shine;
+  animation-name: shine;
+  -webkit-animation-duration: 3s; /* Adjust the duration as needed */
+  animation-duration: 3s; /* Standard property for compatibility */
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  text-shadow: 0 0px 0px rgba(233, 85, 189, 0.419);
+
+}
+
+@-webkit-keyframes shine {
+  0%, 10% {
+    background-position: -1000px;
+  }
+  20% {
+    background-position: top left;
+  }
+  90% {
+    background-position: top right;
+  }
+  100% {
+    background-position: 1000px;
+  }
+}
+
+@keyframes shine {
+  0%, 10% {
+    background-position: -1000px;
+  }
+  20% {
+    background-position: top left;
+  }
+  90% {
+    background-position: top right;
+  }
+  100% {
+    background-position: 1000px;
+  }
+}
+
+.from-rian {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1.5s ease forwards;
+  animation-delay: 3s;
+  opacity: 0;
+}
+
+#shine-rian {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgba(255, 0, 102, 0.3);
+  z-index: 10;
+  -webkit-background-size: 150px;
+  background-size: 150px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 0px 0px rgba(233, 85, 189, 0.419);
+}
+
+@media only screen and (max-width: 600px) {
+  #shine {
+  font-size: 22px;
+}
+}
+
+.read-more {
+    margin-top: 40px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.btn {
+    padding: 10px 15px;
+    border-radius: 20px;
+    background: transparent;
+    border: 1px solid black;
+    color: black;
+    background: transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    transition: 0.3s ease;
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 6s;
+    opacity: 0;
+}
+
+.btn:hover {
+    border: none;
+    background-color: white;
+    color: black;
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
